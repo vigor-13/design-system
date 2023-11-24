@@ -1,0 +1,14 @@
+{
+  "name": "walter",
+  "description": "Internal Package Manager",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node ./dist/index.js",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*"
+  }
+}
