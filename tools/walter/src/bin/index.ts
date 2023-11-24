@@ -1,6 +1,6 @@
 import * as CLI from '../commands';
 
-export const bootstrap = (): void => {
+export const bootstrap = async (): Promise<void> => {
   const cli = new CLI.ComamandLoader();
-  cli.init();
+  await cli.init();
 };
