@@ -1,14 +1,31 @@
 {
   "name": "walter",
+  "version": "0.1.0",
   "description": "Internal Package Manager",
   "main": "dist/index.js",
+  "bin": {
+    "walter": "./dist/index.js"
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "dev": "node ./dist/index.js",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clean:dist": "rimraf dist"
   },
   "devDependencies": {
+    "@types/cli-welcome": "^2.2.2",
+    "@types/fs-extra": "^11.0.4",
+    "@types/js-yaml": "^4.0.9",
+    "eslint-config-custom": "workspace:*",
+    "rimraf": "^5.0.5",
     "tsconfig": "workspace:*",
-    "eslint-config-custom": "workspace:*"
+    "tsup": "^8.0.1"
+  },
+  "dependencies": {
+    "chalk": "^4",
+    "cli-welcome": "^2.2.2",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.1.1",
+    "js-yaml": "^4.1.0"
   }
 }
