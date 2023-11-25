@@ -18,6 +18,7 @@
     "@types/inquirer": "^8.0.0",
     "@types/js-yaml": "^4.0.9",
     "eslint-config-custom": "workspace:*",
+    "prettier": "2.8.8",
     "rimraf": "^5.0.5",
     "tsconfig": "workspace:*",
     "tsup": "^8.0.1"
