@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "description": "",
+  "main": "",
+  "bin": {},
+  "scripts": {
+    "build": "",
+    "dev": "",
+    "lint": "",
+    "clean": ""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
+  }
+}
