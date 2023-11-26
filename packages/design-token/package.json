@@ -1,0 +1,17 @@
+{
+  "name": "design-token",
+  "version": "0.1.0",
+  "description": "Design token",
+  "main": "",
+  "bin": {},
+  "scripts": {
+    "build": "",
+    "dev": "",
+    "lint": "",
+    "clean": ""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
+  }
+}
