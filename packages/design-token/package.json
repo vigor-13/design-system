@@ -1,17 +1,23 @@
 {
   "name": "design-token",
-  "version": "0.1.0",
   "description": "Design token",
   "main": "",
   "bin": {},
   "scripts": {
-    "build": "",
+    "build": "ts-node src/index.ts",
     "dev": "",
-    "lint": "",
+    "lint": "eslint ./src",
     "clean": ""
   },
   "devDependencies": {
+    "@types/node": "^20.9.0",
+    "@types/tinycolor2": "^1.4.6",
     "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "style-dictionary": "^3.9.0",
+    "tinycolor2": "^1.6.0",
+    "ts-node": "^10.9.1",
+    "tsconfig": "workspace:*",
+    "tslib": "^2.6.2",
+    "typescript": "^5.2.2"
   }
 }
