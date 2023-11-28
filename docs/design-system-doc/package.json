@@ -1,0 +1,20 @@
+{
+  "name": "design-system-doc",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "",
+  "bin": {},
+  "scripts": {
+    "dev": "vite",
+    "lint": "",
+    "build": "",
+    "clean": ""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.2"
+  }
+}
