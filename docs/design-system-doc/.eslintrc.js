@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['custom/typescript'],
+  extends: ['custom/typescript', 'plugin:storybook/recommended'],
 };

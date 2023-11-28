@@ -6,15 +6,28 @@
   "main": "",
   "bin": {},
   "scripts": {
-    "dev": "vite",
+    "dev": "storybook dev -p 6006",
     "lint": "",
-    "build": "",
+    "build": "storybook build",
     "clean": ""
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.0",
+    "@storybook/addon-interactions": "^7.6.0",
+    "@storybook/addon-links": "^7.6.0",
+    "@storybook/blocks": "^7.6.0",
+    "@storybook/html": "^7.6.0",
+    "@storybook/html-vite": "^7.6.0",
+    "@storybook/test": "^7.6.0",
     "eslint-config-custom": "workspace:*",
+    "eslint-plugin-storybook": "^0.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "tsconfig": "workspace:*",
     "typescript": "^5.2.2",
     "vite": "^5.0.2"
+  },
+  "dependencies": {
+    "storybook": "^7.6.0"
   }
 }
