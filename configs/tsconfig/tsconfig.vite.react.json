@@ -1,0 +1,6 @@
+{
+  "extends": "./tsconfig.vite.vanila.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  }
+}
