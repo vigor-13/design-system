@@ -4,6 +4,11 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:storybook/recommended',
   ],
-  ignorePatterns: ['vite.config.ts', 'dist'],
+  ignorePatterns: [
+    'vite.config.ts',
+    'dist',
+    'tailwind.config.js',
+    'postcss.config.js',
+  ],
   plugins: ['react-refresh'],
 };
