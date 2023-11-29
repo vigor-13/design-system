@@ -5,6 +5,14 @@ import { config } from './config';
 export class StyleDictionaryFactory {
   private readonly _styleDictionary = StyleDictionary;
 
+  private readonly _registerJsModule = (): void => {
+    const { jsModuleTransformColorValue, jsModuleTransformGroup } =
+      platforms.jsModule;
+
+    this._styleDictionary.registerTransform(jsModuleTransformColorValue);
+    this._styleDictionary.registerTransformGroup(jsModuleTransformGroup);
+  };
+
   private readonly _registerStyleX = (): void => {
     const {
       stylexTransformGroup,
@@ -18,6 +26,7 @@ export class StyleDictionaryFactory {
   };
 
   private readonly _registerPlatforms = (): void => {
+    this._registerJsModule();
     this._registerStyleX();
   };
 
