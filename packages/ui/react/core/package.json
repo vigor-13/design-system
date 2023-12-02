@@ -1,0 +1,17 @@
+{
+  "name": "@react-ui/core",
+  "version": "0.1.0",
+  "description": "UI component for react",
+  "main": "",
+  "bin": {},
+  "scripts": {
+    "build": "",
+    "dev": "",
+    "lint": "eslint .",
+    "clean": ""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
+  }
+}

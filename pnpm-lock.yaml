@@ -176,14 +176,14 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  packages/example:
+  packages/ui/react/react-ui:
     devDependencies:
       eslint-config-custom:
         specifier: workspace:*
-        version: link:../../configs/eslint-config-custom
+        version: link:../../../../configs/eslint-config-custom
       tsconfig:
         specifier: workspace:*
-        version: link:../../configs/tsconfig
+        version: link:../../../../configs/tsconfig
 
   tools/walter:
     dependencies:
