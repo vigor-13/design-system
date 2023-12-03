@@ -207,6 +207,37 @@ importers:
         specifier: workspace:*
         version: link:../../../../configs/tsconfig
 
+  packages/ui/react/example:
+    dependencies:
+      '@react-ui/core':
+        specifier: workspace:^
+        version: link:../core
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.39
+        version: 18.2.39
+      '@types/react-dom':
+        specifier: ^18.2.17
+        version: 18.2.17
+      '@vitejs/plugin-react':
+        specifier: ^4.2.0
+        version: 4.2.0(vite@5.0.2)
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../../../configs/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../configs/tsconfig
+      vite:
+        specifier: ^5.0.2
+        version: 5.0.2(@types/node@20.9.0)
+
   tools/walter:
     dependencies:
       chalk:
@@ -8542,7 +8573,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: true
 
   /react-element-to-jsx-string@15.0.0(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-UDg4lXB6BzlobN60P8fHWVPX3Kyw8ORrTeBtClmIlGdkOOE+GYQSFvmEU5iLLpwp/6v42DINwNcwOhOLfQ//FQ==}
@@ -8935,7 +8965,6 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: true
 
   /semver@5.7.2:
     resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
