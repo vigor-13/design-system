@@ -1,1 +1,1 @@
-console.log('sdf');
+export * from './core';

@@ -1,4 +1,4 @@
 module.exports = {
   extends: ['custom/typescript'],
-  ignorePatterns: [],
+  ignorePatterns: ['babel.config.js'],
 };
