@@ -179,6 +179,31 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
+  packages/ui/react/components:
+    dependencies:
+      '@react-ui/core':
+        specifier: workspace:^
+        version: link:../core
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@storybook/react':
+        specifier: ^7.6.0
+        version: 7.6.0(react-dom@18.2.0)(react@18.2.0)(typescript@5.2.2)
+      '@types/css-modules':
+        specifier: ^1.0.5
+        version: 1.0.5
+      '@types/react':
+        specifier: ^18.2.39
+        version: 18.2.39
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../../../configs/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../configs/tsconfig
+
   packages/ui/react/core:
     dependencies:
       react:
@@ -203,6 +228,9 @@ importers:
 
   packages/ui/react/example:
     dependencies:
+      '@react-ui/components':
+        specifier: workspace:^
+        version: link:../components
       '@react-ui/core':
         specifier: workspace:^
         version: link:../core
