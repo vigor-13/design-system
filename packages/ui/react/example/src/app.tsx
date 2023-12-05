@@ -1,6 +1,11 @@
 import React from 'react';
 import { vigor } from '@react-ui/core/src';
+import styles from './app.module.css';
 
 export function App(): React.ReactNode {
-  return <vigor.div>example</vigor.div>;
+  return (
+    <>
+      <vigor.div className={styles.button}>example</vigor.div>
+    </>
+  );
 }
