@@ -10,7 +10,9 @@
     "build": "tsup --onSuccess 'cp -a templates/* dist/templates'",
     "dev": "node ./dist/index.js",
     "lint": "eslint .",
-    "clean:dist": "rimraf dist"
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
   },
   "devDependencies": {
     "@types/cli-welcome": "^2.2.2",

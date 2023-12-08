@@ -3,6 +3,10 @@
   "name": "eslint-config-custom",
   "version": "0.1.0",
   "description": "",
+  "scripts": {
+    "clean:all": "pnpm clean:modules",
+    "clean:modules": "rimraf node_modules"
+  },
   "publishConfig": {
     "access": "public"
   },

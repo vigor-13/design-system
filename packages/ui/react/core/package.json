@@ -8,7 +8,9 @@
     "build": "",
     "dev": "",
     "lint": "eslint .",
-    "clean": ""
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
   },
   "peerDependencies": {
     "react": ">=18"

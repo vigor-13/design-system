@@ -8,7 +8,9 @@
     "build": "",
     "dev": "",
     "lint": "eslint .",
-    "clean": ""
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
   },
   "devDependencies": {
     "@storybook/react": "^7.6.0",

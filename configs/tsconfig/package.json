@@ -5,5 +5,9 @@
   "description": "",
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "clean:all": "pnpm clean:modules",
+    "clean:modules": "rimraf node_modules"
   }
 }

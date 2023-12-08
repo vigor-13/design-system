@@ -7,7 +7,9 @@
     "build": "ts-node src/index.ts",
     "dev": "",
     "lint": "eslint ./src",
-    "clean": ""
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
   },
   "devDependencies": {
     "@types/node": "^20.9.0",

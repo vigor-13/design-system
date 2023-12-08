@@ -9,7 +9,9 @@
     "dev": "storybook dev -p 6006",
     "lint": "eslint ./src",
     "build": "storybook build",
-    "clean": ""
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:modules": "rimraf node_modules",
+    "clean:dist": "rimraf dist"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.0",
