@@ -5,7 +5,7 @@ import {
   type As,
   type PropsOf,
   type ComponentWithAs,
-} from './core.system.type';
+} from './system.type';
 
 /**
  * All credit goes to Chance (Reach UI), Haz (Reakit) and (fluentui)

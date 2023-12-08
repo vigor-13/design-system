@@ -1,10 +1,10 @@
 import { type AnyObject, type DOMElements } from '../utils';
-import { styled } from './core.system';
+import { styled } from './system';
 import {
   type As,
   type VigorComponent,
   type HTMLVigorComponents,
-} from './core.system.type';
+} from './system.type';
 
 type VigorFactory = (<Element extends As, Props = AnyObject>(
   element: Element,

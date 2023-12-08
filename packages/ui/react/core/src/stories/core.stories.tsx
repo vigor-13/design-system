@@ -1,5 +1,5 @@
 import { type Meta } from '@storybook/react';
-import { vigor } from '../core';
+import { vigor } from '../system';
 
 const meta: Meta = {
   title: 'React UI Component/Core',

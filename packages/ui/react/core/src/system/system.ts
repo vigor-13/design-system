@@ -1,6 +1,6 @@
 import React from 'react';
 import { type AnyObject } from '../utils';
-import { type VigorComponent, type As } from './core.system.type';
+import { type VigorComponent, type As } from './system.type';
 
 export function styled<Element extends As, Props = AnyObject>(
   element: Element,
