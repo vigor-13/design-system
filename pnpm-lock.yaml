@@ -266,6 +266,22 @@ importers:
         specifier: ^5.0.2
         version: 5.0.2(@types/node@20.9.0)
 
+  packages/ui/react/react:
+    dependencies:
+      '@react-ui/components':
+        specifier: workspace:^
+        version: link:../components
+      '@react-ui/core':
+        specifier: workspace:^
+        version: link:../core
+    devDependencies:
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../../../configs/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../configs/tsconfig
+
   tools/walter:
     dependencies:
       chalk:

@@ -1,0 +1,8 @@
+{
+  "display": "React UI",
+  "extends": "tsconfig/tsconfig.node.json",
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}

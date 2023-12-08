@@ -1,0 +1,23 @@
+{
+  "name": "@react-ui/react",
+  "version": "0.1.0",
+  "description": "",
+  "main": "",
+  "bin": {},
+  "scripts": {
+    "build": "",
+    "dev": "",
+    "lint": "eslint .",
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "@react-ui/components": "workspace:^",
+    "@react-ui/core": "workspace:^"
+  }
+}
