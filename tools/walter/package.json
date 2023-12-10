@@ -7,7 +7,7 @@
     "walter": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsup --onSuccess 'cp -a templates/* dist/templates'",
+    "build": "tsup --onSuccess 'cp -r templates dist'",
     "dev": "node ./dist/index.js",
     "lint": "eslint .",
     "clean:all": "pnpm clean:dist & pnpm clean:modules",
