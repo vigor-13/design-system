@@ -1,7 +1,8 @@
+import type { StyleXStyles } from '@stylexjs/stylex';
 import { type AnyObject, type Assign, type DOMElements } from '../utils';
 
 export interface VigorProps {
-  csm?: CSSModule;
+  styles?: StyleXStyles;
 }
 
 export type As = React.ElementType;
@@ -62,5 +63,8 @@ export type HTMLVigorComponents = {
   [Tag in DOMElements]: VigorComponent<Tag, AnyObject>;
 };
 
-export type HTMLVigorProps<Element extends As> = Omit<PropsOf<Element>, 'ref'> &
-  VigorProps;
+export type HTMLVigorProps<Element extends As> = Omit<
+  PropsOf<Element>,
+  'ref' | keyof VigorProps
+> &
+  VigorProps & { as?: As };

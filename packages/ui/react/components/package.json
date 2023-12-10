@@ -29,6 +29,9 @@
     "rollup": "^4.6.1",
     "tsconfig": "workspace:*"
   },
+  "peerDependencies": {
+    "@react-ui/core": "workspace:^"
+  },
   "dependencies": {
     "@react-ui/core": "workspace:^",
     "@stylexjs/stylex": "^0.3.0",
