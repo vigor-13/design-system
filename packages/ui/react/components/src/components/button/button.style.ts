@@ -2,9 +2,9 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '../../tokens.stylex';
 
 export const styles = stylex.create({
-  button: {
+  button: () => ({
     width: '100px',
-    height: '100vh',
-    backgroundColor: 'blue',
-  },
+    height: '100px',
+    backgroundColor: colors.color,
+  }),
 });

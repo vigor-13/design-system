@@ -1,12 +1,20 @@
 import React from 'react';
-import { vigor } from '@react-ui/core/src';
+import { vigor, forwardRef } from '@react-ui/core/src';
 import * as stylex from '@stylexjs/stylex';
 import { styles } from './button.style';
+import { type AnyObject } from '@react-ui/core/src/utils';
 
-export function Button(): React.ReactNode {
+export const Button = forwardRef<AnyObject, 'button'>((props, ref) => {
+  const { children, as, ...rest } = props;
+
   return (
-    <>
-      <vigor.button {...stylex.props([styles.button])}>button</vigor.button>
-    </>
+    <vigor.button
+      ref={ref}
+      as={as}
+      {...rest}
+      {...stylex.props([styles.button()])}
+    >
+      {children}
+    </vigor.button>
   );
-}
+});
