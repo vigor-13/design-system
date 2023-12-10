@@ -179,6 +179,25 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
+  packages/ui/react/color-mode:
+    dependencies:
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.39
+        version: 18.2.39
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../../../configs/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../../../configs/tsconfig
+      tsup:
+        specifier: ^8.0.1
+        version: 8.0.1(typescript@5.2.2)
+
   packages/ui/react/components:
     dependencies:
       '@react-ui/core':
@@ -255,6 +274,9 @@ importers:
 
   packages/ui/react/example:
     dependencies:
+      '@react-ui/color-mode':
+        specifier: workspace:^
+        version: link:../color-mode
       '@react-ui/components':
         specifier: workspace:^
         version: link:../components
@@ -313,6 +335,9 @@ importers:
 
   packages/ui/react/react:
     dependencies:
+      '@react-ui/color-mode':
+        specifier: workspace:^
+        version: link:../color-mode
       '@react-ui/components':
         specifier: workspace:^
         version: link:../components
