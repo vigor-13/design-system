@@ -1,7 +1,7 @@
 import React from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { vigor } from '@react-ui/core/src';
-import { Button } from '@react-ui/components/src';
+import { Button } from '@react-ui/components';
 
 const styles = stylex.create({
   root: {
