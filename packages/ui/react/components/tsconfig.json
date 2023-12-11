@@ -3,6 +3,8 @@
   "extends": "tsconfig/tsconfig.react.json",
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "outDir": "dist"
+    "outDir": "dist",
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   }
 }

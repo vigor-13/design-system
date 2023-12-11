@@ -13,7 +13,7 @@ export const Button = forwardRef<ButtonProps, 'button'>((props, ref) => {
       ref={ref}
       as={as}
       {...rest}
-      {...stylex.props([_styles.button(), styles])}
+      {...stylex.props([_styles.button, styles])}
     >
       {children}
     </vigor.button>
