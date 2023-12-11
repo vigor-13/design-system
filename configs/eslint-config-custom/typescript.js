@@ -5,5 +5,4 @@ module.exports = {
       extends: ['standard-with-typescript', 'prettier'],
     },
   ],
-  ignorePatterns: ['node_modules/', 'dist/'],
 };
