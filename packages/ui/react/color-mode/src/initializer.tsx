@@ -1,11 +1,10 @@
 import type React from 'react';
-
-type ColorMode = 'light' | 'dark' | 'system';
+import { type ColorModeWithSystem, type StorageKey } from './color-mode.type';
 
 interface ColorModeInitializerProps {
   storageType?: 'localStorage' | 'cookie';
-  initialColorMode?: ColorMode;
-  storageKey?: string;
+  initialColorMode?: ColorModeWithSystem;
+  storageKey?: StorageKey;
 }
 
 const VALID_VALUES = new Set(['dark', 'light', 'system']);
@@ -13,13 +12,15 @@ const VALID_VALUES = new Set(['dark', 'light', 'system']);
 /**
  * runtime safe-guard against invalid color mode values
  */
-function normalizeColorMode(initialColorMode: ColorMode): ColorMode {
+function normalizeColorMode(
+  initialColorMode: ColorModeWithSystem,
+): ColorModeWithSystem {
   let value = initialColorMode;
   if (!VALID_VALUES.has(value)) value = 'light';
   return value;
 }
 
-const commonScript = (colorMode: ColorMode): ColorMode => {
+const commonScript = (colorMode: ColorModeWithSystem): ColorModeWithSystem => {
   const mediaQuery = '(prefers-color-scheme: dark)';
   const systemColorMode = window.matchMedia(mediaQuery).matches
     ? 'dark'
@@ -44,14 +45,14 @@ const commonScript = (colorMode: ColorMode): ColorMode => {
  * run local-storage initialize script
  */
 const localStorageScript = (
-  initialColorMode: ColorMode,
+  initialColorMode: ColorModeWithSystem,
   storageKey: string,
 ): void => {
   try {
     const prevColorMode = localStorage.getItem(storageKey);
 
     prevColorMode !== null
-      ? commonScript(prevColorMode as ColorMode)
+      ? commonScript(prevColorMode as ColorModeWithSystem)
       : localStorage.setItem(storageKey, commonScript(initialColorMode));
   } catch (error) {
     console.error(error);
@@ -63,7 +64,7 @@ const localStorageScript = (
  * run cookie-storage initialize script
  */
 const cookieStorageScript = (
-  initialColorMode: ColorMode,
+  initialColorMode: ColorModeWithSystem,
   storageKey: string,
 ): void => {
   try {
@@ -73,7 +74,7 @@ const cookieStorageScript = (
     const prevCookieValue = prevCookie !== null ? prevCookie[2] : null;
 
     if (prevCookieValue !== null) {
-      commonScript(prevCookieValue as ColorMode);
+      commonScript(prevCookieValue as ColorModeWithSystem);
     } else {
       document.cookie = ''
         .concat(storageKey, '=')

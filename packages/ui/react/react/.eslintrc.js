@@ -1,4 +1,4 @@
 module.exports = {
-  extends: ['custom/typescript'],
-  ignorePatterns: [],
+  extends: ['custom/typescript', 'custom/react'],
+  ignorePatterns: ['node_modules/', 'dist/'],
 };

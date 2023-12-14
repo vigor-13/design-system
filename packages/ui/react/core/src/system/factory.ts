@@ -20,7 +20,8 @@ class Factory {
       /**
        * @example const Div = vigor('div');
        */
-      apply(_, __, args: [DOMElements, any]) {
+      apply(_, __, args: [DOMElements, unknown]) {
+        // TODO: unknown 나중에 확인
         return styled(...args);
       },
 

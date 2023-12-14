@@ -1,4 +1,4 @@
 module.exports = {
   extends: ['custom/typescript'],
-  ignorePatterns: ['tsup.config.ts', 'templates'],
+  ignorePatterns: ['node_modules/', 'dist/', 'tsup.config.ts', 'templates'],
 };

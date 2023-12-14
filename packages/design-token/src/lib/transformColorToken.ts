@@ -1,17 +1,23 @@
 import { type TransformedToken } from 'style-dictionary';
 import tinycolor from 'tinycolor2';
 
-export const transformColorToken = (token: TransformedToken): any => {
+export const transformColorToken = (
+  token: TransformedToken,
+): string | undefined => {
   const { darken, lighten } = token as unknown as {
     darken: number | undefined;
     lighten: number | undefined;
   };
   if (darken !== undefined) {
-    return `#${tinycolor(token.value).darken(darken).toHex()}`;
+    return `#${tinycolor(token.value as string)
+      .darken(darken)
+      .toHex()}`;
   }
 
   if (lighten !== undefined) {
-    return `#${tinycolor(token.value).lighten(lighten).toHex()}`;
+    return `#${tinycolor(token.value as string)
+      .lighten(lighten)
+      .toHex()}`;
   }
 };
 

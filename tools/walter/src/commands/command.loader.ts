@@ -8,7 +8,10 @@ export class ComamandLoader {
 
   private readonly _setProgramInfo = (): void => {
     const { name, version, description } = packageJson as any;
-    this._program.name(name).version(version).description(description);
+    this._program
+      .name(name as string)
+      .version(version as string)
+      .description(description as string);
   };
 
   private readonly _setCommandActions = (): void => {

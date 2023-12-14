@@ -5,8 +5,9 @@ module.exports = {
     'plugin:storybook/recommended',
   ],
   ignorePatterns: [
-    'vite.config.ts',
+    'node_modules',
     'dist',
+    'vite.config.ts',
     'tailwind.config.js',
     'postcss.config.js',
   ],
