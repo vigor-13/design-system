@@ -10,7 +10,7 @@ if (rootElement === null) throw new Error('No root element.');
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <ColorModeProvider options={{ initialColorMode: 'dark' }}>
+    <ColorModeProvider>
       <App />
       <About />
     </ColorModeProvider>

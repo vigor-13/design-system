@@ -2,18 +2,6 @@ import { type StorageKey, type ColorMode } from './color-mode.type';
 
 export type StorageManagerType = 'cookie' | 'localStorage';
 
-// export interface StorageManager {
-//   type: StorageManagerType;
-//   ssr?: boolean;
-//   get: (init?: ColorMode) => ColorMode | undefined;
-//   set: (value: ColorMode) => void;
-// }
-
-// export interface StorageManagerFactoryProps {
-//   type: StorageManagerType;
-//   cookie?: string;
-// }
-
 export interface StorageManagerProps {
   storageManagerType: StorageManagerType;
   useSSR?: boolean;

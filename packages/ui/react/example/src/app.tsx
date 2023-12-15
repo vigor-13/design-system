@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@react-ui/components';
+import { useColorMode } from '@react-ui/color-mode';
 import * as stylex from '@stylexjs/stylex';
-// import { vigor } from '@react-ui/core/src';
 
 const styles = stylex.create({
   button: {
@@ -12,9 +12,17 @@ const styles = stylex.create({
 });
 
 export function App(): React.ReactNode {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Button styles={styles.button}>HELLO</Button>
+      <Button
+        styles={styles.button}
+        onClick={() => {
+          toggleColorMode();
+        }}
+      >
+        {colorMode}
+      </Button>
     </>
   );
 }
