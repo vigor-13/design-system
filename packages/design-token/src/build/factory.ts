@@ -2,9 +2,18 @@ import StyleDictionary from 'style-dictionary';
 import { platforms } from '../platforms';
 import { config } from './config';
 
+export const FORMAT_STYLEX = 'stylex';
+
 export class StyleDictionaryFactory {
   private readonly _styleDictionary = StyleDictionary;
 
+  /* Custom Format */
+  private readonly _registerFormat = (): void => {
+    const { stylex } = platforms;
+    this._styleDictionary.registerFormat(stylex.format);
+  };
+
+  /* Transform */
   private readonly _registerJsModule = (): void => {
     const { jsModuleTransformColorValue, jsModuleTransformGroup } =
       platforms.jsModule;
@@ -18,10 +27,12 @@ export class StyleDictionaryFactory {
       stylexTransformGroup,
       stylexTransformName,
       stylexTransformColorValue,
+      stylexTransformDarkModeColor,
     } = platforms.stylex;
 
     this._styleDictionary.registerTransform(stylexTransformName);
     this._styleDictionary.registerTransform(stylexTransformColorValue);
+    this._styleDictionary.registerTransform(stylexTransformDarkModeColor);
     this._styleDictionary.registerTransformGroup(stylexTransformGroup);
   };
 
@@ -30,7 +41,9 @@ export class StyleDictionaryFactory {
     this._registerStyleX();
   };
 
+  /* Build */
   public build = (): void => {
+    this._registerFormat();
     this._registerPlatforms();
     this._styleDictionary.extend(config).buildAllPlatforms();
   };

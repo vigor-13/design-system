@@ -5,8 +5,8 @@ export const config: Platform = {
   transformGroup: 'stylex',
   files: [
     {
-      destination: 'token.stylex.js',
-      format: 'javascript/module-flat',
+      destination: 'stylex/token.stylex.ts',
+      format: 'stylex',
     },
   ],
 };

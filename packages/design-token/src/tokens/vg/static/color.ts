@@ -45,15 +45,18 @@ export const vg = {
           value: '{vg.static.color.red.100}',
           description: 'Red-90 (lighten 10)',
           lighten: 10,
+          darkMode: null,
         },
         100: {
           value: '#C92519',
           description: 'Red-100 (default)',
+          darkMode: null,
         },
         110: {
           value: '{vg.static.color.red.100}',
           description: 'Red-110 (darken 10)',
           darken: 10,
+          darkMode: null,
         },
       },
 
@@ -65,15 +68,18 @@ export const vg = {
           value: '{vg.static.color.green.100}',
           description: 'Green-90 (lighten 10)',
           lighten: 10,
+          darkMode: null,
         },
         100: {
           value: '#00A86B',
           description: 'Green-100 (default)',
+          darkMode: null,
         },
         110: {
           value: '{vg.static.color.green.100}',
           description: 'Green-110 (darken 10)',
           darken: 10,
+          darkMode: null,
         },
       },
 
@@ -85,15 +91,18 @@ export const vg = {
           value: '{vg.static.color.blue.100}',
           description: 'Blue-90 (lighten 10)',
           lighten: 10,
+          darkMode: null,
         },
         100: {
           value: '#0F52BA',
           description: 'Blue',
+          darkMode: null,
         },
         110: {
           value: '{vg.static.color.blue.100}',
           description: 'Blue-110 (darken 10)',
           darken: 10,
+          darkMode: null,
         },
       },
     },

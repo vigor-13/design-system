@@ -4,7 +4,8 @@
   "main": "",
   "bin": {},
   "scripts": {
-    "build": "ts-node src/index.ts",
+    "build": "ts-node src/index.ts && pnpm postbuild",
+    "postbuild": "prettier --write dist",
     "dev": "",
     "lint": "eslint ./src",
     "clean:all": "pnpm clean:dist & pnpm clean:modules",
@@ -15,6 +16,7 @@
     "@types/node": "^20.9.0",
     "@types/tinycolor2": "^1.4.6",
     "eslint-config-custom": "workspace:*",
+    "prettier": "^3.1.1",
     "style-dictionary": "^3.9.0",
     "tinycolor2": "^1.6.0",
     "ts-node": "^10.9.1",

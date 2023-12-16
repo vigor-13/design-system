@@ -3,7 +3,12 @@ import {
   type Transform,
   type TransformGroup,
 } from 'style-dictionary';
-import { transformColorToken, colorTokenMatcher } from '../../lib';
+import {
+  transformColorToken,
+  colorTokenMatcher,
+  darkModeColorMatcher,
+  transformDarkColorToken,
+} from '../../lib';
 
 export const stylexTransformName: Named<Transform> = {
   type: `name`,
@@ -22,7 +27,18 @@ export const stylexTransformColorValue: Named<Transform> = {
   transformer: transformColorToken,
 };
 
+export const stylexTransformDarkModeColor: Named<Transform> = {
+  type: 'attribute',
+  name: 'stylex-transform-dark-mode-color',
+  matcher: darkModeColorMatcher,
+  transformer: transformDarkColorToken,
+};
+
 export const stylexTransformGroup: Named<TransformGroup> = {
   name: 'stylex',
-  transforms: [stylexTransformName.name, stylexTransformColorValue.name],
+  transforms: [
+    stylexTransformName.name,
+    stylexTransformColorValue.name,
+    stylexTransformDarkModeColor.name,
+  ],
 };
