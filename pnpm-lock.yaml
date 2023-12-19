@@ -153,6 +153,10 @@ importers:
         version: 5.0.2(@types/node@20.9.0)
 
   packages/design-token:
+    dependencies:
+      '@stylexjs/stylex':
+        specifier: ^0.3.0
+        version: 0.3.0
     devDependencies:
       '@types/node':
         specifier: ^20.9.0
@@ -206,12 +210,18 @@ importers:
 
   packages/ui/react/components:
     dependencies:
+      '@react-ui/color-mode':
+        specifier: workspace:^
+        version: link:../color-mode
       '@react-ui/core':
         specifier: workspace:^
         version: link:../core
       '@stylexjs/stylex':
         specifier: ^0.3.0
         version: 0.3.0
+      design-token:
+        specifier: workspace:^
+        version: link:../../../design-token
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -280,9 +290,6 @@ importers:
 
   packages/ui/react/example:
     dependencies:
-      '@react-ui/color-mode':
-        specifier: workspace:^
-        version: link:../color-mode
       '@react-ui/components':
         specifier: workspace:^
         version: link:../components

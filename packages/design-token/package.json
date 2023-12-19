@@ -23,5 +23,8 @@
     "tsconfig": "workspace:*",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@stylexjs/stylex": "^0.3.0"
   }
 }

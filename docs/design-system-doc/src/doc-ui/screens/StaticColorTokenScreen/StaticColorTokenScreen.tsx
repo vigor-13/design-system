@@ -1,12 +1,12 @@
 import React from 'react';
-import token from 'design-token/dist/token';
+import { tokens } from 'design-token/dist/stylex/token.stylex.ts';
 import { ColorTokenList } from '../../components';
 
 export const StaticColorTokenScreen = (): React.ReactNode => {
   return (
     <>
       <h1>Static Color Token</h1>
-      <ColorTokenList token={token.vg.static.color} />
+      <ColorTokenList token={tokens.vg.static.color} />
     </>
   );
 };
