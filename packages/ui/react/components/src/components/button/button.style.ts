@@ -1,10 +1,10 @@
 import * as stylex from '@stylexjs/stylex';
-import { colors } from '../../tokens.stylex.ts';
+import { tokens } from '@react-ui/theme/src/token.stylex.ts';
 
 export const styles = stylex.create({
   button: {
     width: '100px',
     height: '100px',
-    backgroundColor: colors.color,
+    backgroundColor: tokens['vg.static.color.blue.100'],
   },
 });

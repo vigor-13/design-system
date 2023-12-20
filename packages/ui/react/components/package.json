@@ -33,8 +33,11 @@
     "@react-ui/core": "workspace:^"
   },
   "dependencies": {
+    "@react-ui/color-mode": "workspace:^",
     "@react-ui/core": "workspace:^",
+    "@react-ui/theme": "workspace:^",
     "@stylexjs/stylex": "^0.3.0",
+    "design-token": "workspace:^",
     "react": "^18.2.0"
   }
 }
