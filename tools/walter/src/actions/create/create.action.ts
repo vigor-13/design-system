@@ -1,7 +1,7 @@
 import * as prettier from 'prettier';
 import * as fs from 'fs-extra';
+import path from 'node:path';
 import { CreateActionPrompt } from './create.prompt';
-import packaeJsonTemplate from '../../../templates/_package.json';
 import { isExistDirectory } from '../../utils';
 
 interface Data {
@@ -29,7 +29,7 @@ export class CreateAction {
     this._data.name = name;
   };
 
-  private readonly _createPackage = async (): Promise<void> => {
+  private readonly _createDirectory = async (): Promise<void> => {
     const workspaceDirectory = `${process.cwd()}/${this._data.workspace}`;
 
     if (!(await isExistDirectory(workspaceDirectory))) {
@@ -49,18 +49,50 @@ export class CreateAction {
     }
 
     await fs.mkdir(this._data.name, { recursive: true });
+  };
 
-    const packageJson = packaeJsonTemplate;
-    packageJson.name = this._data.name;
+  private readonly _copyTemplate = async (): Promise<void> => {
+    try {
+      const templateDir = path.resolve(__dirname, './templates/default');
+      const destinationDir = `${process.cwd()}/${this._data.name}`;
+      await fs.copy(templateDir, destinationDir);
+    } catch (error) {
+      // TODO: Error handling
+      console.error(error);
+      process.exit(1);
+    }
+  };
 
-    const formattedJson = await prettier.format(JSON.stringify(packageJson), {
-      parser: 'json-stringify',
-    });
+  private readonly _updatePackageJson = async (): Promise<void> => {
+    try {
+      const filePath = `${process.cwd()}/${this._data.name}/package.json`;
 
-    await fs.writeFile(
-      `${process.cwd()}/${this._data.name}/package.json`,
-      formattedJson,
-    );
+      const file: string = await fs.readFile(filePath, 'utf-8');
+      const newPackageJson = JSON.parse(file);
+      newPackageJson.name = this._data.name;
+
+      const formattedJson = await prettier.format(
+        JSON.stringify(newPackageJson),
+        {
+          parser: 'json-stringify',
+        },
+      );
+
+      await fs.writeFile(
+        `${process.cwd()}/${this._data.name}/package.json`,
+        formattedJson,
+      );
+    } catch (error) {
+      // TODO: Error handling
+      console.error(error);
+      process.exit(1);
+    }
+  };
+
+  private readonly _createPackage = async (): Promise<void> => {
+    await this._createDirectory();
+    await this._copyTemplate();
+    await this._updatePackageJson();
   };
 
   public handle = async (): Promise<void> => {

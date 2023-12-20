@@ -3,7 +3,12 @@ import {
   type Transform,
   type TransformGroup,
 } from 'style-dictionary';
-import tinycolor from 'tinycolor2';
+import {
+  transformColorToken,
+  colorTokenMatcher,
+  darkModeColorMatcher,
+  transformDarkColorToken,
+} from '../../lib';
 
 export const stylexTransformName: Named<Transform> = {
   type: `name`,
@@ -18,37 +23,22 @@ export const stylexTransformColorValue: Named<Transform> = {
   type: `value`,
   name: 'stylex-transform-color-value',
   transitive: true,
-  matcher: (token) => {
-    const { darken, lighten } = token as unknown as {
-      darken: number | undefined;
-      lighten: number | undefined;
-    };
+  matcher: colorTokenMatcher,
+  transformer: transformColorToken,
+};
 
-    if (
-      (darken !== undefined && darken > 0) ||
-      (lighten !== undefined && lighten > 0)
-    ) {
-      return true;
-    } else {
-      return false;
-    }
-  },
-  transformer: (token) => {
-    const { darken, lighten } = token as unknown as {
-      darken: number | undefined;
-      lighten: number | undefined;
-    };
-    if (darken !== undefined) {
-      return `#${tinycolor(token.value).darken(darken).toHex()}`;
-    }
-
-    if (lighten !== undefined) {
-      return `#${tinycolor(token.value).lighten(lighten).toHex()}`;
-    }
-  },
+export const stylexTransformDarkModeColor: Named<Transform> = {
+  type: 'attribute',
+  name: 'stylex-transform-dark-mode-color',
+  matcher: darkModeColorMatcher,
+  transformer: transformDarkColorToken,
 };
 
 export const stylexTransformGroup: Named<TransformGroup> = {
   name: 'stylex',
-  transforms: [stylexTransformName.name, stylexTransformColorValue.name],
+  transforms: [
+    stylexTransformName.name,
+    stylexTransformColorValue.name,
+    stylexTransformDarkModeColor.name,
+  ],
 };

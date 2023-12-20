@@ -7,7 +7,7 @@
   "scripts": {
     "build": "",
     "dev": "",
-    "lint": "",
+    "lint": "eslint .",
     "clean": ""
   },
   "devDependencies": {

@@ -10,9 +10,11 @@ export const getPnpmWorkspaces = async (): Promise<string[]> => {
       'utf-8',
     );
     const result = yaml.load(rawFile) as { packages: string[] };
-    const workspaces = result.packages.map((workspace: string) => {
-      return workspace.split('/')[0];
-    });
+    const workspaces = result.packages
+      .map((workspace: string) => {
+        return workspace.split('/')[0];
+      })
+      .filter((workspace) => !workspace.includes('!'));
 
     return workspaces;
   } catch (error) {

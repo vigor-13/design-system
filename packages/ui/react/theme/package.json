@@ -1,0 +1,31 @@
+{
+  "name": "@react-ui/theme",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "copy:token": "ts-node ./scripts/copy-tokens",
+    "build": "pnpm copy:token",
+    "lint": "eslint .",
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.39",
+    "eslint-config-custom": "workspace:*",
+    "fs-extra": "^11.1.1",
+    "ts-node": "^10.9.1",
+    "tsconfig": "workspace:*",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@react-ui/color-mode": "workspace:^",
+    "@stylexjs/stylex": "^0.3.0",
+    "design-token": "workspace:^",
+    "react": "^18.2.0"
+  }
+}

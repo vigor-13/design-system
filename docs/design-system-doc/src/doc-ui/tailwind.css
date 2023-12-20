@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset MDX Docs CSS */
+.sbdocs.sbdocs-wrapper {
+  padding: 0;
+}
+.sbdocs.sbdocs-content {
+  max-width: 100%;
+}

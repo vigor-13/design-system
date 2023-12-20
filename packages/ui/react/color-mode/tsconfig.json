@@ -1,0 +1,8 @@
+{
+  "display": "React UI Color Mode",
+  "extends": "tsconfig/tsconfig.react.json",
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}

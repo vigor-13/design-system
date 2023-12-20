@@ -1,0 +1,30 @@
+{
+  "name": "@react-ui/core",
+  "version": "0.1.0",
+  "description": "UI component for react",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "",
+    "lint": "eslint .",
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@storybook/react": "^7.6.0",
+    "@stylexjs/stylex": "^0.3.0",
+    "@types/css-modules": "^1.0.5",
+    "@types/react": "^18.2.39",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "tsup": "^8.0.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

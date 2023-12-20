@@ -1,0 +1,24 @@
+{
+  "name": "@react-ui/color-mode",
+  "version": "0.1.0",
+  "description": "React UI Color Mode Component",
+  "main": "dist/index.mjs",
+  "types": "dist/index.d.mts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "",
+    "lint": "eslint .",
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.39",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "tsup": "^8.0.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}

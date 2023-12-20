@@ -1,0 +1,5 @@
+{
+  "display": "design-system-doc",
+  "extends": "tsconfig/tsconfig.vite.react.json",
+  "include": ["src", "vite.config.ts"]
+}

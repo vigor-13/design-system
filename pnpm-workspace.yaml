@@ -1,5 +1,7 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
-  - 'configs/*'
-  - 'tools/*'
+  - 'apps/**/*'
+  - 'packages/**/*'
+  - 'configs/**/*'
+  - 'tools/**/*'
+  - 'docs/**/*'
+  - '!**/templates/**'

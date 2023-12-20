@@ -1,16 +1,18 @@
 {
   "name": "walter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Internal Package Manager",
   "main": "dist/index.js",
   "bin": {
     "walter": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup --onSuccess 'cp -r templates dist'",
     "dev": "node ./dist/index.js",
     "lint": "eslint .",
-    "clean:dist": "rimraf dist"
+    "clean:all": "pnpm clean:dist & pnpm clean:modules",
+    "clean:dist": "rimraf dist",
+    "clean:modules": "rimraf node_modules"
   },
   "devDependencies": {
     "@types/cli-welcome": "^2.2.2",
