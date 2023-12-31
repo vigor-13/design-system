@@ -2,10 +2,9 @@
   "name": "@react-ui/react",
   "version": "0.1.0",
   "description": "",
-  "main": "",
-  "bin": {},
+  "main": "src/index.ts",
   "scripts": {
-    "build": "",
+    "build": "tsup",
     "dev": "",
     "lint": "eslint .",
     "clean:all": "pnpm clean:dist & pnpm clean:modules",
@@ -14,11 +13,13 @@
   },
   "devDependencies": {
     "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*"
+    "tsconfig": "workspace:*",
+    "tsup": "^8.0.1"
   },
   "dependencies": {
+    "@react-ui/core": "workspace:^",
     "@react-ui/color-mode": "workspace:^",
-    "@react-ui/components": "workspace:^",
-    "@react-ui/core": "workspace:^"
+    "@react-ui/theme": "workspace:^",
+    "@react-ui/components": "workspace:^"
   }
 }

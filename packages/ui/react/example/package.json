@@ -29,9 +29,7 @@
     "vite-plugin-stylex": "^0.4.1"
   },
   "dependencies": {
-    "@react-ui/color-mode": "workspace:^",
-    "@react-ui/components": "workspace:^",
-    "@react-ui/core": "workspace:^",
+    "@react-ui/react": "workspace:^",
     "@stylexjs/stylex": "^0.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

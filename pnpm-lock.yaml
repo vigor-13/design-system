@@ -293,15 +293,9 @@ importers:
 
   packages/ui/react/example:
     dependencies:
-      '@react-ui/color-mode':
+      '@react-ui/react':
         specifier: workspace:^
-        version: link:../color-mode
-      '@react-ui/components':
-        specifier: workspace:^
-        version: link:../components
-      '@react-ui/core':
-        specifier: workspace:^
-        version: link:../core
+        version: link:../react
       '@stylexjs/stylex':
         specifier: ^0.4.1
         version: 0.4.1
@@ -363,6 +357,9 @@ importers:
       '@react-ui/core':
         specifier: workspace:^
         version: link:../core
+      '@react-ui/theme':
+        specifier: workspace:^
+        version: link:../theme
     devDependencies:
       eslint-config-custom:
         specifier: workspace:*
@@ -370,6 +367,9 @@ importers:
       tsconfig:
         specifier: workspace:*
         version: link:../../../../configs/tsconfig
+      tsup:
+        specifier: ^8.0.1
+        version: 8.0.1(typescript@5.3.3)
 
   packages/ui/react/theme:
     dependencies:

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button } from '@react-ui/components';
-import { useColorMode } from '@react-ui/color-mode';
+import { Button, useColorMode } from '@react-ui/react';
 import * as stylex from '@stylexjs/stylex';
 
 const styles = stylex.create({
