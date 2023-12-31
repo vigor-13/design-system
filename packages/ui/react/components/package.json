@@ -19,14 +19,14 @@
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-typescript": "^11.1.5",
-    "@storybook/react": "^7.6.0",
-    "@stylexjs/babel-plugin": "^0.3.0",
-    "@stylexjs/eslint-plugin": "^0.3.0",
-    "@stylexjs/rollup-plugin": "^0.3.0",
+    "@storybook/react": "^7.6.6",
+    "@stylexjs/babel-plugin": "^0.4.1",
+    "@stylexjs/eslint-plugin": "^0.4.1",
+    "@stylexjs/rollup-plugin": "^0.4.1",
     "@types/css-modules": "^1.0.5",
-    "@types/react": "^18.2.39",
+    "@types/react": "^18.2.46",
     "eslint-config-custom": "workspace:*",
-    "rollup": "^4.6.1",
+    "rollup": "^4.9.2",
     "tsconfig": "workspace:*"
   },
   "peerDependencies": {
@@ -36,7 +36,7 @@
     "@react-ui/color-mode": "workspace:^",
     "@react-ui/core": "workspace:^",
     "@react-ui/theme": "workspace:^",
-    "@stylexjs/stylex": "^0.3.0",
+    "@stylexjs/stylex": "^0.4.1",
     "design-token": "workspace:^",
     "react": "^18.2.0"
   }

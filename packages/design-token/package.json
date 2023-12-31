@@ -13,18 +13,18 @@
     "clean:modules": "rimraf node_modules"
   },
   "devDependencies": {
-    "@types/node": "^20.9.0",
+    "@types/node": "^20.10.6",
     "@types/tinycolor2": "^1.4.6",
     "eslint-config-custom": "workspace:*",
     "prettier": "^3.1.1",
-    "style-dictionary": "^3.9.0",
+    "style-dictionary": "^3.9.1",
     "tinycolor2": "^1.6.0",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "tsconfig": "workspace:*",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@stylexjs/stylex": "^0.3.0"
+    "@stylexjs/stylex": "^0.4.1"
   }
 }
