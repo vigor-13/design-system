@@ -23,9 +23,9 @@ const preview: Preview = {
     },
     options: {
       storySort: (a, b) => {
-        console.log('>>>>>>>>>>>>>>>>>>>');
-        console.log(a);
-        console.log(b);
+        // console.log('>>>>>>>>>>>>>>>>>>>');
+        // console.log(a);
+        // console.log(b);
       },
     },
   },

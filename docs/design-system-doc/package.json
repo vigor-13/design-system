@@ -9,6 +9,8 @@
     "dev": "storybook dev -p 6006",
     "lint": "eslint ./src",
     "build": "storybook build",
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_ac78369d321fc7d",
     "clean:all": "pnpm clean:dist & pnpm clean:modules",
     "clean:modules": "rimraf node_modules",
     "clean:dist": "rimraf dist"
@@ -28,6 +30,7 @@
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
+    "chromatic": "^10.2.0",
     "eslint-config-custom": "workspace:*",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
@@ -40,9 +43,11 @@
     "tailwindcss": "^3.4.0",
     "tsconfig": "workspace:*",
     "typescript": "^5.3.3",
-    "vite": "^5.0.10"
+    "vite": "^5.0.10",
+    "vite-plugin-stylex": "^0.3.0"
   },
   "dependencies": {
+    "@react-ui/components": "workspace:*",
     "@react-ui/core": "workspace:*",
     "@storybook/addon-themes": "^7.6.6",
     "design-token": "workspace:*",

@@ -57,6 +57,9 @@ importers:
 
   docs/design-system-doc:
     dependencies:
+      '@react-ui/components':
+        specifier: workspace:*
+        version: link:../../packages/ui/react/components
       '@react-ui/core':
         specifier: workspace:*
         version: link:../../packages/ui/react/core
@@ -112,6 +115,9 @@ importers:
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
+      chromatic:
+        specifier: ^10.2.0
+        version: 10.2.0
       eslint-config-custom:
         specifier: workspace:*
         version: link:../../configs/eslint-config-custom
@@ -151,6 +157,9 @@ importers:
       vite:
         specifier: ^5.0.10
         version: 5.0.10(@types/node@20.10.6)
+      vite-plugin-stylex:
+        specifier: ^0.3.0
+        version: 0.3.0(@babel/traverse@7.23.7)(@babel/types@7.23.6)(vite@5.0.10)
 
   packages/design-token:
     dependencies:
@@ -5484,6 +5493,11 @@ packages:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
     dev: false
+
+  /chromatic@10.2.0:
+    resolution: {integrity: sha512-UDVGWa2Fx9CLCpwnyfvFHGr0vGF0ooB1TugUdgOcjC9pJXiFa67i7oaXMyTfVRIFxlt/QkqOJwdqDqqlLFffCw==}
+    hasBin: true
+    dev: true
 
   /ci-info@3.9.0:
     resolution: {integrity: sha512-NIxF55hv4nSqQswkAeiOi1r83xy8JldOFDTWiug55KBu9Jnblncd2U6ViHmYgHf01TPZS77NJBhBMKdWj9HQMQ==}
