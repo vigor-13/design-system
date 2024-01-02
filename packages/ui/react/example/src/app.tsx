@@ -4,8 +4,6 @@ import * as stylex from '@stylexjs/stylex';
 
 const styles = stylex.create({
   button: {
-    width: '200px',
-    height: '200px',
     borderRadius: '10px',
   },
 });
