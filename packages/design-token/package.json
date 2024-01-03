@@ -22,9 +22,7 @@
     "ts-node": "^10.9.2",
     "tsconfig": "workspace:*",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "@stylexjs/stylex": "^0.3.0"
+    "typescript": "^5.3.3",
+    "@stylexjs/stylex": "^0.4.1"
   }
 }
