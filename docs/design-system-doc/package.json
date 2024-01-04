@@ -44,7 +44,8 @@
     "tsconfig": "workspace:*",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
-    "vite-plugin-stylex": "^0.3.0"
+    "vite-plugin-stylex": "^0.3.0",
+    "@stylexjs/stylex": "^0.3.0"
   },
   "dependencies": {
     "@react-ui/components": "workspace:*",
