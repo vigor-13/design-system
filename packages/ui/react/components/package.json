@@ -29,8 +29,8 @@
     "rollup": "^4.9.2",
     "tsconfig": "workspace:*",
     "@stylexjs/eslint-plugin": "^0.3.0",
-    "@stylexjs/rollup-plugin": "^0.3.0",
-    "@stylexjs/stylex": "^0.3.0"
+    "@stylexjs/rollup-plugin": "^0.5.1",
+    "@stylexjs/stylex": "^0.5.1"
   },
   "dependencies": {
     "@react-ui/color-mode": "workspace:^",

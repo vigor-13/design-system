@@ -25,11 +25,11 @@
     "typescript-plugin-css-modules": "^5.0.2",
     "vite": "^5.0.10",
     "vite-plugin-babel": "^1.2.0",
-    "vite-plugin-stylex": "^0.3.0"
+    "vite-plugin-stylex": "^0.5.0"
   },
   "dependencies": {
     "@react-ui/react": "workspace:^",
-    "@stylexjs/stylex": "^0.3.0",
+    "@stylexjs/stylex": "^0.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

@@ -25,7 +25,7 @@
   },
   "dependencies": {
     "@react-ui/color-mode": "workspace:^",
-    "@stylexjs/stylex": "^0.3.0",
+    "@stylexjs/stylex": "^0.5.1",
     "design-token": "workspace:^",
     "react": "^18.2.0"
   }
