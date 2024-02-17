@@ -6,7 +6,7 @@
   "main": "src/index.ts",
   "scripts": {
     "postinstall": "pnpm copy:token",
-    "copy:token": "ts-node ./scripts/copy-tokens",
+    "copy:token": "ts-node ./scripts/copy-tokens.ts",
     "build": "pnpm copy:token",
     "lint": "eslint .",
     "clean:all": "pnpm clean:dist & pnpm clean:modules",
