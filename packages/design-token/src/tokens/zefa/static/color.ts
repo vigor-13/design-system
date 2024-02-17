@@ -1,6 +1,10 @@
 export const zefa = {
   static: {
     color: {
+      transparent: {
+        value: 'transparent',
+        description: 'Transparent',
+      },
       white: {
         value: '#FFFFFF',
         description: 'White',
