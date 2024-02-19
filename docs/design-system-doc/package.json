@@ -6,7 +6,7 @@
   "main": "",
   "bin": {},
   "scripts": {
-    "dev": "storybook dev -p 6006",
+    "dev": "storybook dev --no-open -p 6006",
     "lint": "eslint ./src",
     "build": "storybook build",
     "build-storybook": "storybook build",
@@ -26,6 +26,7 @@
     "@storybook/react": "^7.6.6",
     "@storybook/react-vite": "^7.6.6",
     "@storybook/test": "^7.6.6",
+    "@stylexjs/stylex": "^0.5.1",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.2.1",
@@ -44,14 +45,14 @@
     "tsconfig": "workspace:*",
     "typescript": "^5.3.3",
     "vite": "^5.0.10",
-    "vite-plugin-stylex": "^0.5.0",
-    "@stylexjs/stylex": "^0.5.1"
+    "vite-plugin-stylex": "^0.5.0"
   },
   "dependencies": {
     "@react-ui/components": "workspace:*",
     "@react-ui/core": "workspace:*",
     "@storybook/addon-themes": "^7.6.6",
     "design-token": "workspace:*",
+    "react-syntax-highlighter": "^15.5.0",
     "storybook": "^7.6.6"
   }
 }

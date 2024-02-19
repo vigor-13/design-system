@@ -2,4 +2,58 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="Introduction" />
 
-작업중...
+# 디자인 시스템 구현
+
+Brad Frost의 디자인 시스템 이론을 실제로 구현해보는 프로젝트다.
+
+디자인 시스템의 핵심을 정리하면 다음과 같다. 사용자 인터페이스를 컴포넌트 단위로 나누고 컴포넌트의 재사용성을 극대화하기 위해서 리소스를 여러 계층으로 나누어 관리하는 시스템이다.
+
+디자인 시스템은 조직의 규모와 상황에 따라 다르게 구현된다. 자신의 상황에 맞게 구현하는 것이 중요하다. 여기서는 1인 개발자로 구성된 소규모 조직을 상정하여 프로젝트를 진행한다.
+
+## 기술 스택
+
+프로젝트에 사용한 기술 스택은 다음과 같다.
+
+- TypeScript
+- React
+- PNPM & Turborepo
+- Style Dictionary
+- StyleX
+- Vite
+- Storybook
+
+## 디자인 시스템 레이어
+
+Brad Forst가 제시하는 [디자인 시스템 계층 구조](https://www.vigorously.xyz/posts/design-system-ecosystem/)는 5단계로 이루어진다.
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design_system_layer_drawio.png)
+
+핵심 디자인 시스템 레이어는 다음의 3가지로 구성된다.
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design_system_core_layer_drawio.png)
+
+아이콘을 제외한 "디자인 토큰"과 "UI 컴포넌트"를 구현한다.
+
+- 디자인 토큰은 Style Dictionary를 사용하여 따로 패키지를 분리하여 관리한다.
+- UI 컴포넌트는 웹 컴포넌트를 사용하여 구현하는 것이 좋다.
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design_system_core_layer_drawio2.png)
+
+"UI 컴포넌트"를 웹 컴포넌트로 구현했다면 UI 컴포넌트를 "기술별 구현 레이어" 에서 React, Vue 등으로 래핑하여 여러 환경에서 사용할 수 있다.
+
+다만 여기서는 웹 컴포넌트를 사용하지 않고 바로 React로 구현한다.
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design_system_core_layer_drawio3.png)
+
+## 코드 레포지토리 구조
+
+- [https://github.com/vigor-13/design-system](https://github.com/vigor-13/design-system)
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design-system-excalidraw.png)
+
+## 참조 자료
+
+- [Brad Frost 블로그](https://bradfrost.com/blog/)
+- [Atomic Design](https://atomicdesign.bradfrost.com/)
+- [Figma Zefa](https://www.figma.com/community/file/1246279641146833745/zefa-component-library?searchSessionId=lst0iero-nlzltvrtlrl)
+- [Chakra UI](https://chakra-ui.com/)

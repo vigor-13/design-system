@@ -1,17 +1,18 @@
 import React from 'react';
-import { Button, useColorMode } from '@react-ui/react';
+import { Button } from '@react-ui/react';
 import * as stylex from '@stylexjs/stylex';
 
-const styles = stylex.create({});
-
 export function App(): React.ReactNode {
-  // const { toggleColorMode } = useColorMode();
-  // const [size, setSize] = React.useState<'md' | 'sm'>('md');
+  const styles = stylex.create({
+    button: {
+      width: '100px',
+      height: '100px',
+    },
+  });
+
   return (
     <>
-      <Button disabled variant="ghost" styles={styles}>
-        Button Label
-      </Button>
+      <Button styles={styles}>Button Label</Button>
     </>
   );
 }
