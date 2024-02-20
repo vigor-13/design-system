@@ -21,10 +21,14 @@ const preview: Preview = {
       },
     },
     options: {
-      storySort: (a, b) => {
-        // console.log('>>>>>>>>>>>>>>>>>>>');
-        // console.log(a);
-        // console.log(b);
+      storySort: {
+        method: 'alphabetical',
+        order: [
+          'Design Token',
+          ['Overview', 'Color'],
+          'React UI Component',
+          ['Overview', 'Core', 'Button'],
+        ],
       },
     },
   },
