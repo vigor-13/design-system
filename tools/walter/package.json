@@ -17,20 +17,20 @@
   "devDependencies": {
     "@types/cli-welcome": "^2.2.2",
     "@types/fs-extra": "^11.0.4",
-    "@types/inquirer": "^8.0.0",
+    "@types/inquirer": "^9.0.7",
     "@types/js-yaml": "^4.0.9",
     "eslint-config-custom": "workspace:*",
-    "prettier": "2.8.8",
+    "prettier": "3.1.1",
     "rimraf": "^5.0.5",
     "tsconfig": "workspace:*",
     "tsup": "^8.0.1"
   },
   "dependencies": {
-    "chalk": "^4",
+    "chalk": "^5.3.0",
     "cli-welcome": "^2.2.2",
     "commander": "^11.1.0",
-    "fs-extra": "^11.1.1",
-    "inquirer": "^8.0.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^9.2.12",
     "js-yaml": "^4.1.0"
   }
 }

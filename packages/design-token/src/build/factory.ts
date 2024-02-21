@@ -9,8 +9,9 @@ export class StyleDictionaryFactory {
 
   /* Custom Format */
   private readonly _registerFormat = (): void => {
-    const { stylex } = platforms;
+    const { stylex, jsModule } = platforms;
     this._styleDictionary.registerFormat(stylex.format);
+    this._styleDictionary.registerFormat(jsModule.format);
   };
 
   /* Transform */

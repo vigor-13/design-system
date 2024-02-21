@@ -1,0 +1,58 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design Token/Overview" />
+
+# 디자인 토큰
+
+- [https://www.vigorously.xyz/posts/design-system-extension/#design-token](https://www.vigorously.xyz/posts/design-system-extension/#design-token)
+- [https://m3.material.io/foundations/design-tokens/overview](https://m3.material.io/foundations/design-tokens/overview)
+
+디자인 토큰은 디자인 시스템에서 신뢰할 수 있는 단일 소스 역할을 하여 여러 제품군에서 일관성있는 스타일을 적용할 수 있게 해준다.
+
+![](https://lh3.googleusercontent.com/waGEctxciVv95qMiowManyFv1EVBomVECA55ssOO5_aE0_dUWvB4YMvbHVi-U9dzUnMCG9pNA7xQmuYhRIabv-Efiuu43MfH_jduiBJbBLYl%3Ds0)
+
+## 토큰 계층 구조
+
+디자인 토큰을 효과적으로 사용하기 위해선 계층 구조를 설정 하는 것이 중요하다. 여기에 정해진 법칙은 없지만 여러 가지 사용 사례를 찾아볼 수 있다.
+
+### Style Dictionary 토큰 계층 구조
+
+- [https://amzn.github.io/style-dictionary/#/tokens?id=category-type-item](https://amzn.github.io/style-dictionary/#/tokens?id=category-type-item)
+
+![](https://amzn.github.io/style-dictionary/assets/cti.png)
+
+### Material Design 토큰 계층 구조
+
+- [https://m3.material.io/foundations/design-tokens/how-to-read-tokens](https://m3.material.io/foundations/design-tokens/how-to-read-tokens)
+
+![](https://lh3.googleusercontent.com/IrMn3VR2Ub4-G9UVzUVYhlVTaLvAdSVkbgBHXWrMZ_YIdE3s42HgiRroQPKH10qCOwT2aLS-TABxCyLk6_pzo4nKgKFEfFafe0b2FgnJKTSC%3Ds0)
+
+### 내 토큰 구조
+
+Material Design 토큰을 참조하여 계층 구조를 만들었다. 구조가 간단하고 확장성이 높아 보였기 때문이다.
+
+Material Design 은 토큰을 3가지 타입으로 분류한다.
+
+- `참조 토큰`
+  - 변하지 않는 정적 토큰이다.
+  - 다른 정적 토큰을 참조 할 수 있다.
+  - 사용자 또는 디바이스의 컨텍스트에 따라 변하지 않는다.
+  - 일관된 값을 유지하기 위한 시작점이다.
+- `시스템 토큰`
+  - "참조 토큰"의 용도를 정의한다.
+  - 특정 테마나 컨텍스트에 대한 디자인적 체계를 결정한다.
+  - 가급적으로 실제 값 보다는 "참조 토큰"을 사용해야 한다.
+- `컴포넌트 토큰`
+  - 컴포넌트를 구성하는 요소와 값을 나타낸다.
+  - 가급적으로 실제 값 보다는 "시스템 토큰" 또는 "참조 토큰"을 사용해야 한다.
+
+전반적으로 마음에 들었지만 다음과 같이 네이밍을 살짝 변경하여 사용하기로 했다.
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design_system_token_layer_drawio.png)
+
+- `static 토큰`
+  - 일관된 값을 사용하기 위한 정적 토큰이다. ex) 컬러 팔레트, 폰트 패밀리 등...
+- `semantic 토큰`
+  - 특정 테마나 디자인 시스템을 위한 디자인적 의미가 정의된 토큰이다. ex) error, warning, success 등...
+- `component 토큰`
+  - 개별 컴포넌트의 내부 요소를 정의하기 위한 토큰이다. ex) button의 border color 또는 font color 등...

@@ -13,7 +13,7 @@
     "clean:modules": "rimraf node_modules"
   },
   "devDependencies": {
-    "@types/react": "^18.2.39",
+    "@types/react": "^18.2.46",
     "eslint-config-custom": "workspace:*",
     "tsconfig": "workspace:*",
     "tsup": "^8.0.1"
