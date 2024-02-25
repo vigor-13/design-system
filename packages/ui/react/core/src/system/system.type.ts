@@ -1,7 +1,14 @@
 import type { StyleXStyles } from '@stylexjs/stylex';
-import { type AnyObject, type Assign, type DOMElements } from '../utils';
+import { type Assign, type DOMElements } from '../utils';
+import {
+  type SystemProps,
+  type StyleProps,
+} from '../styled-system/system.type';
 
-export interface VigorProps {
+export interface VigorProps extends SystemProps {
+  /**
+   * StyleX 스타일 객체
+   */
   styles?: StyleXStyles;
 }
 
@@ -17,54 +24,51 @@ export type OmitCommonProps<Target, OmitAdditionalProps> = Omit<
 >;
 
 export type RightJoinProps<
-  SourceProps = AnyObject,
-  OverrideProps = AnyObject,
+  SourceProps extends object = {},
+  OverrideProps extends object = {},
 > = OmitCommonProps<SourceProps, keyof OverrideProps> & OverrideProps;
 
 export type MergeWithAs<
-  OriginalElementProps,
-  AsElementProps,
-  ComponentProps = AnyObject,
+  ElementProps extends object,
+  AsElementProps extends object,
+  ComponentProps extends object = {},
   AsElement = As,
 > = (
-  | RightJoinProps<OriginalElementProps, ComponentProps>
+  | RightJoinProps<ElementProps, ComponentProps>
   | RightJoinProps<AsElementProps, ComponentProps>
 ) & {
   as?: AsElement;
 };
 
 export interface ComponentWithAs<
-  OriginalElement extends As,
-  ComponentProps = AnyObject,
+  Element extends As,
+  Props extends object = {},
 > {
-  <AsElement extends As = OriginalElement>(
+  <AsElement extends As = Element>(
     props: MergeWithAs<
-      React.ComponentProps<OriginalElement>,
+      React.ComponentProps<Element>,
       React.ComponentProps<AsElement>,
-      ComponentProps,
+      Props,
       AsElement
     >,
   ): JSX.Element;
-  propTypes?: React.WeakValidationMap<ComponentProps>;
-  contextTypes?: React.ValidationMap<any>;
-  defaultProps?: Partial<ComponentProps>;
+
   displayName?: string;
+  propTypes?: React.WeakValidationMap<Props>;
+  contextTypes?: React.ValidationMap<any>;
+  defaultProps?: Partial<Props>;
+  id?: string;
 }
 
-export interface VigorComponent<
-  OriginalElement extends As,
-  ComponentProps = AnyObject,
-> extends ComponentWithAs<
-    OriginalElement,
-    Assign<VigorProps, ComponentProps>
-  > {}
+export interface VigorComponent<Element extends As, Props extends object = {}>
+  extends ComponentWithAs<Element, Assign<VigorProps, Props>> {}
 
 export type HTMLVigorComponents = {
-  [Tag in DOMElements]: VigorComponent<Tag, AnyObject>;
+  [Tag in DOMElements]: VigorComponent<Tag, {}>;
 };
 
 export type HTMLVigorProps<Element extends As> = Omit<
   PropsOf<Element>,
-  'ref' | keyof VigorProps
+  'ref' | keyof StyleProps
 > &
   VigorProps & { as?: As };
