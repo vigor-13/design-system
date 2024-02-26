@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
+import '@react-ui/core/dist/style/stylex.css';
 
 export const decorators = [
   withThemeByClassName({
@@ -27,7 +28,7 @@ const preview: Preview = {
           'Design Token',
           ['Overview', 'Color'],
           'React UI Component',
-          ['Overview', 'Core', 'Button'],
+          ['Overview', 'Core', 'Box', 'Button'],
         ],
       },
     },

@@ -1,18 +1,22 @@
 import React from 'react';
-import { Button } from '@react-ui/react';
 import * as stylex from '@stylexjs/stylex';
+import { Button, Box } from '@react-ui/react';
+// import { tokens } from '@react-ui/react/node_modules/@react-ui/theme/src/token.stylex.ts';
+
+const styles = stylex.create({
+  box: {
+    backgroundColor: 'coral',
+  },
+});
 
 export function App(): React.ReactNode {
-  const styles = stylex.create({
-    button: {
-      width: '100px',
-      height: '100px',
-    },
-  });
-
   return (
     <>
-      <Button styles={styles}>Button Label</Button>
+      <Box styles={styles.box} p="20px" m="20px">
+        <Button w="200px" width="400px" height="400px">
+          Button Label
+        </Button>
+      </Box>
     </>
   );
 }
