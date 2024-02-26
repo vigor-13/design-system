@@ -98,7 +98,7 @@ export const styleProperties = stylex.create({
 
   // Space
   m: (value) => ({
-    mmargin: value,
+    margin: value,
   }),
   margin: (value) => ({
     margin: value,
