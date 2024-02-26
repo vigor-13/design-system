@@ -1,5 +1,11 @@
 import React from 'react';
-import { vigor, forwardRef, type HTMLVigorProps } from '@react-ui/core';
+import {
+  vigor,
+  forwardRef,
+  createStylexProps,
+  extractStyleProps,
+  type HTMLVigorProps,
+} from '@react-ui/core';
 import * as stylex from '@stylexjs/stylex';
 import { cx } from '../../utils';
 import { styles as _styles } from './button.style';
@@ -17,8 +23,11 @@ export const Button = forwardRef<ButtonProps, 'button'>((props, ref) => {
     as,
     styles,
     className,
-    ...rest
+    ...otherProps
   } = props;
+
+  const [styleProps, rest] = extractStyleProps(otherProps);
+  const stylexProps = createStylexProps(styleProps);
 
   return (
     <vigor.button
@@ -32,9 +41,12 @@ export const Button = forwardRef<ButtonProps, 'button'>((props, ref) => {
         _styles[size],
         _styles[variant],
         styles,
+        ...stylexProps,
       ])}
     >
       {children}
     </vigor.button>
   );
 });
+
+Button.displayName = 'Button';

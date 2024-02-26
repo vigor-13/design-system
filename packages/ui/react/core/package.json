@@ -2,10 +2,11 @@
   "name": "@react-ui/core",
   "version": "0.1.0",
   "description": "UI component for react",
-  "main": "dist/index.mjs",
-  "types": "dist/index.d.mts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsup",
+    "build": "rollup --config",
     "dev": "",
     "lint": "eslint .",
     "clean:all": "pnpm clean:dist & pnpm clean:modules",
@@ -16,15 +17,29 @@
     "react": ">=18"
   },
   "devDependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
     "@storybook/react": "^7.6.6",
+    "@stylexjs/eslint-plugin": "^0.5.1",
+    "@stylexjs/rollup-plugin": "^0.5.1",
     "@stylexjs/stylex": "^0.5.1",
     "@types/css-modules": "^1.0.5",
+    "@types/lodash.mergewith": "^4.6.9",
     "@types/react": "^18.2.46",
+    "csstype": "^3.1.3",
     "eslint-config-custom": "workspace:*",
+    "rollup": "^4.9.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-ts": "^3.4.5",
     "tsconfig": "workspace:*",
     "tsup": "^8.0.1"
   },
   "dependencies": {
+    "lodash.mergewith": "^4.6.2",
     "react": "^18.2.0"
   }
 }
