@@ -258,6 +258,76 @@ export const styleProperties = stylex.create({
   placeSelf: (value) => ({
     placeSelf: value,
   }),
+
+  // Color
+  color: (value) => ({
+    color: value,
+  }),
+  fill: (value) => ({
+    fill: value,
+  }),
+  stroke: (value) => ({
+    stroke: value,
+  }),
+
+  // Background
+  bg: (value) => ({
+    background: value,
+  }),
+  background: (value) => ({
+    background: value,
+  }),
+  bgClip: (value) => ({
+    backgroundClip: value,
+  }),
+  backgroundClip: (value) => ({
+    backgroundClip: value,
+  }),
+  bgColor: (value) => ({
+    backgroundColor: value,
+  }),
+  backgroundColor: (value) => ({
+    backgroundColor: value,
+  }),
+  backgroundImage: (value) => ({
+    backgroundImage: value,
+  }),
+  bgImage: (value) => ({
+    backgroundImage: value,
+  }),
+  bgImg: (value) => ({
+    backgroundImage: value,
+  }),
+  bgGradient: (value) => ({
+    background: value, // TODO: 확인 필요
+  }),
+  bgSize: (value) => ({
+    backgroundSize: value,
+  }),
+  backgroundSize: (value) => ({
+    backgroundSize: value,
+  }),
+  bgPos: (value) => ({
+    backgroundPosition: value,
+  }),
+  bgPosition: (value) => ({
+    backgroundPosition: value,
+  }),
+  backgroundPosition: (value) => ({
+    backgroundPosition: value,
+  }),
+  bgRepeat: (value) => ({
+    backgroundRepeat: value,
+  }),
+  backgroundRepeat: (value) => ({
+    backgroundRepeat: value,
+  }),
+  bgAttachment: (value) => ({
+    backgroundAttachment: value,
+  }),
+  backgroundAttachment: (value) => ({
+    backgroundAttachment: value,
+  }),
 });
 
 export const createStylexProps = (props: any) => {
@@ -351,6 +421,32 @@ export const createStylexProps = (props: any) => {
     placeItems,
     placeContent,
     placeSelf,
+
+    // Color
+    color,
+    fill,
+    stroke,
+
+    // Background
+    bg,
+    background,
+    bgClip,
+    backgroundClip,
+    bgColor,
+    backgroundColor,
+    backgroundImage,
+    bgImage,
+    bgImg,
+    bgGradient,
+    bgSize,
+    backgroundSize,
+    bgPos,
+    bgPosition,
+    backgroundPosition,
+    bgRepeat,
+    backgroundRepeat,
+    bgAttachment,
+    backgroundAttachment,
   } = props;
 
   return [
@@ -447,5 +543,33 @@ export const createStylexProps = (props: any) => {
     placeItems && styleProperties.placeItems(placeItems),
     placeContent && styleProperties.placeContent(placeContent),
     placeSelf && styleProperties.placeSelf(placeSelf),
+
+    // Color
+    color && styleProperties.color(color),
+    fill && styleProperties.fill(fill),
+    stroke && styleProperties.stroke(stroke),
+
+    // Background
+    bg && styleProperties.bg(bg),
+    background && styleProperties.background(background),
+    bgClip && styleProperties.bgClip(bgClip),
+    backgroundClip && styleProperties.backgroundClip(backgroundClip),
+    bgColor && styleProperties.bgColor(bgColor),
+    backgroundColor && styleProperties.backgroundColor(backgroundColor),
+    backgroundImage && styleProperties.backgroundImage(backgroundImage),
+    bgImage && styleProperties.bgImage(bgImage),
+    bgImg && styleProperties.bgImg(bgImg),
+    bgGradient && styleProperties.bgGradient(bgGradient),
+    bgSize && styleProperties.bgSize(bgSize),
+    backgroundSize && styleProperties.backgroundSize(backgroundSize),
+    bgPos && styleProperties.bgPos(bgPos),
+    bgPosition && styleProperties.bgPosition(bgPosition),
+    backgroundPosition &&
+      styleProperties.backgroundPosition(backgroundPosition),
+    bgRepeat && styleProperties.bgRepeat(bgRepeat),
+    backgroundRepeat && styleProperties.backgroundRepeat(backgroundRepeat),
+    bgAttachment && styleProperties.bgAttachment(bgAttachment),
+    backgroundAttachment &&
+      styleProperties.backgroundAttachment(backgroundAttachment),
   ];
 };
