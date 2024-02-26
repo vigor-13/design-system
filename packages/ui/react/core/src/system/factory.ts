@@ -1,4 +1,4 @@
-import { type AnyObject, type DOMElements } from '../utils';
+import { type DOMElements } from '../utils';
 import { styled } from './system';
 import {
   type As,
@@ -6,21 +6,20 @@ import {
   type HTMLVigorComponents,
 } from './system.type';
 
-type VigorFactory = (<Element extends As, Props = AnyObject>(
+type VigorFactory = <Element extends As, Props extends object = {}>(
   element: Element,
   options?: any, // TODO: 나중에 확인
-) => VigorComponent<Element, Props>) &
-  HTMLVigorComponents;
+) => VigorComponent<Element, Props>;
 
 class Factory {
   private readonly _cache = new Map<DOMElements, VigorComponent<DOMElements>>();
 
-  public build = (): VigorFactory => {
+  public build = (): VigorFactory & HTMLVigorComponents => {
     return new Proxy(styled, {
       /**
        * @example const Div = vigor('div');
        */
-      apply(_, __, args: [DOMElements, unknown]) {
+      apply(target, thisArg, args: [DOMElements, unknown]) {
         // TODO: unknown 나중에 확인
         return styled(...args);
       },
@@ -35,7 +34,7 @@ class Factory {
 
         return this._cache.get(element);
       },
-    }) as VigorFactory;
+    }) as VigorFactory & HTMLVigorComponents;
   };
 }
 

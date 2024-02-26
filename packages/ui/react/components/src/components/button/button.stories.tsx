@@ -1,5 +1,5 @@
 import React from 'react';
-import { type StoryObj, type Meta, type StoryFn } from '@storybook/react';
+import { type Meta, type StoryFn } from '@storybook/react';
 import { Button, type ButtonProps } from './button';
 
 const meta: Meta = {
@@ -12,6 +12,9 @@ const meta: Meta = {
       </div>
     ),
   ],
+  parameters: {
+    componentSubtitle: '기본 버튼 컴포넌트',
+  },
 };
 export default meta;
 
@@ -74,9 +77,15 @@ basic.argTypes = {
 export const variants: StoryFn<ButtonProps> = (): any => {
   return (
     <>
-      <Button variant="primary">Primary</Button>
-      <Button variant="secondary">Secondary</Button>
-      <Button variant="ghost">Ghost</Button>
+      <Button mr="10px" variant="primary">
+        Primary
+      </Button>
+      <Button mr="10px" variant="secondary">
+        Secondary
+      </Button>
+      <Button mr="10px" variant="ghost">
+        Ghost
+      </Button>
     </>
   );
 };
@@ -87,13 +96,13 @@ export const variants: StoryFn<ButtonProps> = (): any => {
 export const Disabled: StoryFn<ButtonProps> = (): any => {
   return (
     <>
-      <Button disabled variant="primary">
+      <Button mr="10px" disabled variant="primary">
         Primary
       </Button>
-      <Button disabled variant="secondary">
+      <Button mr="10px" disabled variant="secondary">
         Secondary
       </Button>
-      <Button disabled variant="ghost">
+      <Button mr="10px" disabled variant="ghost">
         Ghost
       </Button>
     </>
@@ -106,8 +115,12 @@ export const Disabled: StoryFn<ButtonProps> = (): any => {
 export const sizes: StoryFn<ButtonProps> = (): any => {
   return (
     <>
-      <Button size="md">Medium Button</Button>
-      <Button size="sm">Small Button</Button>
+      <Button mr="10px" size="md">
+        Medium Button
+      </Button>
+      <Button mr="10px" size="sm">
+        Small Button
+      </Button>
     </>
   );
 };

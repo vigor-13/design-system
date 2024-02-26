@@ -22,15 +22,15 @@
     "@babel/preset-typescript": "^7.23.3",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/react": "^7.6.6",
+    "@stylexjs/eslint-plugin": "^0.5.1",
+    "@stylexjs/rollup-plugin": "^0.5.1",
+    "@stylexjs/stylex": "^0.5.1",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
-    "@storybook/react": "^7.6.6",
     "eslint-config-custom": "workspace:*",
     "rollup": "^4.9.2",
-    "tsconfig": "workspace:*",
-    "@stylexjs/eslint-plugin": "^0.3.0",
-    "@stylexjs/rollup-plugin": "^0.5.1",
-    "@stylexjs/stylex": "^0.5.1"
+    "tsconfig": "workspace:*"
   },
   "dependencies": {
     "@react-ui/color-mode": "workspace:^",

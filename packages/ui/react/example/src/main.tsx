@@ -8,10 +8,8 @@ const rootElement = document.getElementById('root');
 if (rootElement === null) throw new Error('No root element.');
 
 ReactDOM.createRoot(rootElement).render(
-  <React.StrictMode>
-    <VigorUIProvider>
-      <App />
-      <About />
-    </VigorUIProvider>
-  </React.StrictMode>,
+  <VigorUIProvider>
+    <App />
+    <About />
+  </VigorUIProvider>,
 );
