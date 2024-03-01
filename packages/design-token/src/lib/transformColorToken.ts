@@ -35,7 +35,6 @@ export const transformDarkColorToken = (
     .toHex()}`;
 
   token.darkMode = result;
-  console.log(token);
   return token;
 };
 

@@ -20,3 +20,21 @@ Brad Frost의 디자인 시스템을 구현해보는 프로젝트다.
 ## 패키지 구조
 
 ![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design-system-excalidraw.png)
+
+- 컴포넌트 빌드하기
+
+```bash
+pnpm build:components
+```
+
+- vite 예제 프로젝트 실행 - http://localhost:5173
+
+```bash
+pnpm dev:ui-example
+```
+
+- 디자인 시스템 스토리북 실행 - http://localhost:6006
+
+```bash
+pnpm dev:ui-docs
+```

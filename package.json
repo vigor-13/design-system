@@ -7,11 +7,12 @@
   "scripts": {
     "up:all": "pnpm up --latest -r",
     "prepare": "husky install",
-    "build": "turbo run build",
-    "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean:all": "turbo run clean:all"
+    "clean:all": "turbo run clean:all",
+    "build:ui": "turbo run build:ui",
+    "dev:ui-example": "turbo run dev --filter @react-ui/example",
+    "dev:ui-docs": "turbo run dev --filter design-system-doc"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
