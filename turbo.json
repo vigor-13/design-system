@@ -1,16 +1,27 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "pipeline": {
-    "build": {},
-    "deploy": {},
     "test": {},
     "lint": {},
+    "clean:all": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true
     },
-    "clean:all": {
-      "cache": false
-    }
+    "build": {},
+    "build:ui": {
+      "dependsOn": [
+        "design-token#build",
+        "@react-ui/core#build",
+        "@react-ui/color-mode#build",
+        "@react-ui/theme#build",
+        "@react-ui/components#build",
+        "@react-ui/react#build"
+      ],
+      "outputs": ["./dist"]
+    },
+    "deploy": {}
   }
 }
