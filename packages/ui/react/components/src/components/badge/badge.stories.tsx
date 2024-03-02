@@ -58,7 +58,7 @@ basic.argTypes = {
     },
   },
   children: {
-    description: '배지 라벨 텍스',
+    description: '배지 라벨 텍스트',
   },
 };
 
