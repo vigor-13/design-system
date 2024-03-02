@@ -25,7 +25,6 @@ export const Button = forwardRef<ButtonProps, 'button'>((props, ref) => {
     className,
     ...otherProps
   } = props;
-
   const [styleProps, rest] = extractStyleProps(otherProps);
   const stylexProps = createStylexProps(styleProps);
 
