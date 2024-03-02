@@ -20,7 +20,7 @@
         "@react-ui/components#build",
         "@react-ui/react#build"
       ],
-      "outputs": ["./dist"]
+      "outputs": ["dist/**"]
     },
     "deploy": {}
   }
