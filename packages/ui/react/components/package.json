@@ -36,6 +36,7 @@
     "@react-ui/color-mode": "workspace:^",
     "@react-ui/core": "workspace:^",
     "@react-ui/theme": "workspace:^",
+    "@tabler/icons-react": "^2.47.0",
     "design-token": "workspace:^",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

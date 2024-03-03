@@ -2,7 +2,7 @@
 
 Brad Frost의 디자인 시스템을 구현해보는 프로젝트다.
 
-- 결과물 스토리북: [링크](https://6593e7d1cb37f48bdc252696-onjurkhrez.chromatic.com/?path=/docs/introduction--docs)
+- 결과물 스토리북: [링크](https://6593e7d1cb37f48bdc252696-jylkqjugsa.chromatic.com/?path=/docs/introduction--docs)
 - 시스템 이론 정리: [링크](https://www.vigorously.xyz/posts/design-system-ecosystem/)
 - 디자인 시스템 레러펀스: [링크](https://bradfrost.com/blog/)
 
@@ -24,7 +24,7 @@ Brad Frost의 디자인 시스템을 구현해보는 프로젝트다.
 - 컴포넌트 빌드하기
 
 ```bash
-pnpm build:components
+pnpm build:ui
 ```
 
 - vite 예제 프로젝트 실행 - http://localhost:5173
