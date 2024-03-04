@@ -5,25 +5,30 @@ export const zefa = {
         default: {
           value: '{zefa.static.color.purple.120}',
           description: 'Primary',
+          darkMode: null,
         },
         hover: {
           value: '{zefa.static.color.purple.140}',
           description: 'Primary Hover',
+          darkMode: null,
         },
         press: {
           value: '{zefa.static.color.purple.160}',
           description: 'Primary Press',
+          darkMode: null,
         },
         background: {
           default: {
             value: '{zefa.static.color.purple.120}',
             description: 'Primary Background',
             lighten: 5,
+            darkMode: null,
           },
           light: {
             value: '{zefa.static.color.purple.120}',
             description: 'Primary Background Light',
             lighten: 10,
+            darkMode: null,
           },
         },
       },

@@ -39,7 +39,8 @@ export const styles = stylex.create({
     position: 'relative',
     width: '20px',
     height: '20px',
-    border: '1px solid black',
+    border: '1px solid',
+    borderColor: tokens['zefa.static.color.black'],
     borderRadius: '4px',
   },
 
