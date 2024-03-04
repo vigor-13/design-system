@@ -34,7 +34,7 @@ export const transformDarkColorToken = (
     .spin(180)
     .toHex()}`;
 
-  token.darkMode = result;
+  token.darkMode = token.darkMode !== null ? token.darkMode : result;
   return token;
 };
 

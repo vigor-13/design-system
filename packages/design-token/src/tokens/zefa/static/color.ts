@@ -8,239 +8,296 @@ export const zefa = {
       white: {
         value: '#FFFFFF',
         description: 'White',
+        darkMode: '#000000',
       },
       black: {
         value: '#000000',
         description: 'Black',
+        darkMode: '#FFFFFF',
       },
       purple: {
         0: {
           value: '#D4B1F4',
           description: 'Purple 0',
+          darkMode: null,
         },
         20: {
           value: '#C89BF1',
           description: 'Purple 20',
+          darkMode: null,
         },
         40: {
           value: '#BB84ED',
           description: 'Purple 40',
+          darkMode: null,
         },
         60: {
           value: '#AE6DEB',
           description: 'Purple 60',
+          darkMode: null,
         },
         80: {
           value: '#9C4DE5',
           description: 'Purple 80',
+          darkMode: null,
         },
         100: {
           value: '#9641E5',
           description: 'Purple 100',
+          darkMode: null,
         },
         120: {
           value: '#8A2BE2',
           description: 'Purple 120',
+          darkMode: null,
         },
         140: {
           value: '#6C1EC4',
           description: 'Purple 140',
+          darkMode: null,
         },
         160: {
           value: '#4E12A8',
           description: 'Purple 160',
+          darkMode: null,
         },
         180: {
           value: '#3A0D90',
           description: 'Purple 180',
+          darkMode: null,
         },
         200: {
           value: '#280978',
           description: 'Purple 200',
+          darkMode: null,
         },
       },
       cyan: {
         0: {
           value: '#99E9DD',
           description: 'Cyan 0',
+          darkMode: null,
         },
         20: {
           value: '#7EE4D4',
           description: 'Cyan 20',
+          darkMode: null,
         },
         40: {
           value: '#66DECC',
           description: 'Cyan 40',
+          darkMode: null,
         },
         60: {
           value: '#4BD9C3',
           description: 'Cyan 60',
+          darkMode: null,
         },
         80: {
           value: '#32D3BA',
           description: 'Cyan 80',
+          darkMode: null,
         },
         100: {
           value: '#19CEB2',
           description: 'Cyan 100',
+          darkMode: null,
         },
         120: {
           value: '#00C8AA',
           description: 'Cyan 120',
+          darkMode: null,
         },
         140: {
           value: '#03B395',
           description: 'Cyan 140',
+          darkMode: null,
         },
         160: {
           value: '#019D81',
           description: 'Cyan 160',
+          darkMode: null,
         },
         180: {
           value: '#03876D',
           description: 'Cyan 180',
+          darkMode: null,
         },
         200: {
           value: '#02735A',
           description: 'Cyan 200',
+          darkMode: null,
         },
       },
       yellow: {
         0: {
           value: '#F1E399',
           description: 'Yellow 0',
+          darkMode: null,
         },
         20: {
           value: '#EDDC7F',
           description: 'Yellow 20',
+          darkMode: null,
         },
         40: {
           value: '#E9D566',
           description: 'Yellow 40',
+          darkMode: null,
         },
         60: {
           value: '#E6CE4C',
           description: 'Yellow 60',
+          darkMode: null,
         },
         80: {
           value: '#E4C733',
           description: 'Yellow 80',
+          darkMode: null,
         },
         100: {
           value: '#E5C51A',
           description: 'Yellow 100',
+          darkMode: null,
         },
         120: {
           value: '#DCBA01',
           description: 'Yellow 120',
+          darkMode: null,
         },
         140: {
           value: '#C59E00',
           description: 'Yellow 140',
+          darkMode: null,
         },
         160: {
           value: '#AE8400',
           description: 'Yellow 160',
+          darkMode: null,
         },
         180: {
           value: '#976C02',
           description: 'Yellow 180',
+          darkMode: null,
         },
         200: {
           value: '#835405',
           description: 'Yellow 200',
+          darkMode: null,
         },
       },
       green: {
         0: {
           value: '#99CFAB',
           description: 'Green 0',
+          darkMode: null,
         },
         20: {
           value: '#80C397',
           description: 'Green 20',
+          darkMode: null,
         },
         40: {
           value: '#67B680',
           description: 'Green 40',
+          darkMode: null,
         },
         60: {
           value: '#4DAB6C',
           description: 'Green 60',
+          darkMode: null,
         },
         80: {
           value: '#339F57',
           description: 'Green 80',
+          darkMode: null,
         },
         100: {
           value: '#199342',
           description: 'Green 100',
+          darkMode: null,
         },
         120: {
           value: '#01882E',
           description: 'Green 120',
+          darkMode: null,
         },
         140: {
           value: '#007322',
           description: 'Green 140',
+          darkMode: null,
         },
         160: {
           value: '#005F17',
           description: 'Green 160',
+          darkMode: null,
         },
         180: {
           value: '#034D14',
           description: 'Green 180',
+          darkMode: null,
         },
         200: {
           value: '#053B0F',
           description: 'Green 200',
+          darkMode: null,
         },
       },
       red: {
         0: {
           value: '#F79999',
           description: 'Red 0',
+          darkMode: null,
         },
         20: {
           value: '#F57F80',
           description: 'Red 20',
+          darkMode: null,
         },
         40: {
           value: '#F36666',
           description: 'Red 40',
+          darkMode: null,
         },
         60: {
           value: '#F14B4D',
           description: 'Red 60',
+          darkMode: null,
         },
         80: {
           value: '#EF3332',
           description: 'Red 80',
+          darkMode: null,
         },
         100: {
           value: '#E81113',
           description: 'Red 100',
+          darkMode: null,
         },
         120: {
           value: '#DF0001',
           description: 'Red 120',
+          darkMode: null,
         },
         140: {
           value: '#C50103',
           description: 'Red 140',
+          darkMode: null,
         },
         160: {
           value: '#B70004',
           description: 'Red 160',
+          darkMode: null,
         },
         180: {
           value: '#9F0105',
           description: 'Red 180',
+          darkMode: null,
         },
         200: {
           value: '#860105',
           description: 'Red 200',
+          darkMode: null,
         },
       },
       gray: {
