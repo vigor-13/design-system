@@ -28,7 +28,7 @@ const preview: Preview = {
           'Design Token',
           ['Overview', 'Color'],
           'React UI Component',
-          ['Overview', 'Core', 'Box', 'Button'],
+          ['Overview', 'Core', 'ColorMode', 'Box', 'Button'],
         ],
       },
     },

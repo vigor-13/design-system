@@ -1,13 +1,14 @@
 import { Meta } from '@storybook/blocks';
 import SyntaxHighlighter from 'react-syntax-highlighter';
+import '../preview.css';
 
 <Meta title="React UI Component/Overview" />
 
-# 코어 JSX 엘리먼트
+## 코어 JSX 엘리먼트
 
 UI 컴포넌트의 범용성을 위해서 여러가지 유틸 기능이 포함된 전용 JSX 엘리먼트를 사용한다.
 
-## Chakra JSX 엘리먼트
+### Chakra JSX 엘리먼트
 
 코어 JSX 엘리먼트를 구현하기 위해서 Chakra UI의 코어 시스템 코드([@chakra-ui/system](https://www.npmjs.com/package/@chakra-ui/system))를 참조했다.
 
@@ -19,7 +20,7 @@ UI 컴포넌트의 범용성을 위해서 여러가지 유틸 기능이 포함�
 
 자세한 내용은 [Chakra UI 공식문서](https://chakra-ui.com/docs/styled-system/chakra-factory#chakra-jsx-elements)를 참조한다.
 
-## 기능
+### 기능
 
 - JSX 엘리먼트 생성 함수
 
@@ -32,3 +33,23 @@ UI 컴포넌트의 범용성을 위해서 여러가지 유틸 기능이 포함�
 - `styles` props
 
 ![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design-system-overview-3.png)
+
+## 컬러 모드
+
+### VigorUIProvider
+
+컬러 모드를 사용하기 위한 컨텍스트 프로바이더다.
+
+내부적으로 2가지 프로바이더가 적용되어 있다.
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design_system_vigor_ui_provider.png)
+
+1. ColorModeProvider : 컬러모드를 변경하고 로컬스토리지 또는 쿠키에 값을 저장해준다.
+2. ThemeProvider : 컬러모드에 맞춰 스타일 토큰 값을 변경해준다.
+
+### useColorMode Hook
+
+![](https://vigor-13-temp.s3.ap-northeast-2.amazonaws.com/design_system_use_colormode.png)
+
+- colorMode: 현재 적용된 컬러 모드(light / dark) 값.
+- toggleColorMode: 컬러 모드 변경 핸들러 함수.

@@ -8,8 +8,13 @@ const meta: Meta = {
   tags: ['autodocs'],
   decorators: [(Story: any) => <Story />],
   parameters: {
-    componentSubtitle:
-      '가장 기본이 되는 컴포넌트다. HTML의 div 엘리먼트 역할을 한다. 여러 유틸리티 스타일 프로퍼티 및 stylex 스타일 객체를 적용할 수 있다.',
+    componentSubtitle: '기본 컴포넌트',
+    docs: {
+      description: {
+        component:
+          'HTML의 div 엘리먼트 역할을 한다. 여러 유틸리티 스타일 프로퍼티 및 stylex 스타일 객체를 적용할 수 있다.',
+      },
+    },
   },
 };
 export default meta;
