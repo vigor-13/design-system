@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, useColorMode } from '@react-ui/react';
+import { Button, useColorMode, Input } from '@react-ui/react';
 
 export function App(): React.ReactNode {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -13,6 +13,7 @@ export function App(): React.ReactNode {
       >
         {colorMode}
       </Button>
+      <Input ml="20px" label="Label" placeholder="Placeholder" />
     </>
   );
 }
